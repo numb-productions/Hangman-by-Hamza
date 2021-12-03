@@ -8,8 +8,8 @@ class Word:
 class Player:
   pass
 class Game:
-  def play():
+  def play(self):
     pass
-  
- game = Game()
- game.play()
+
+game = Game()
+game.play()
