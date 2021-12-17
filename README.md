@@ -3,10 +3,11 @@ Another console game I'm trying to create by myself. No external resources will 
 
 # Notes
 
-- It doesn't work just yet.
+- It doesn't work just yet
 
 # Update Notes
 
-- Current version `0.0`
-- Last updated `12/3/2004`
-- Project created.
+- Current version `0.1`
+- Last updated `17/12/2021`
+- Project reset
+- Classes are being worked on
