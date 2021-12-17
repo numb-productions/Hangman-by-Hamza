@@ -3,7 +3,7 @@ Another console game I'm trying to create by myself. No external resources will 
 
 # Notes
 
-- ...
+- It doesn't work just yet.
 
 # Update Notes
 
