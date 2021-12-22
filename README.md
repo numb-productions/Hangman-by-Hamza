@@ -7,7 +7,7 @@ Another console game I'm trying to create by myself. No external resources will 
 
 # Update Notes
 
-- Current version `0.1`
-- Last updated `17/12/2021`
-- Project reset
-- Classes are being worked on
+- Current version `0.2-alpha`
+- Last updated `22/12/2021`
+- Updated most classes
+- Basic functionality is being shaped
