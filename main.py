@@ -1,7 +1,7 @@
 import os
 import random
 
-clear = lambda: os.system('clear')
+clear = lambda: os.system('cls')
 
 
 # PLAYER
@@ -10,24 +10,33 @@ clear = lambda: os.system('clear')
 class Player:
 	def __init__(self, game):
 		self.game = game
-		self.name = "Default"
+		self.name = "Bruno"
 
 	def play(self):
 		
 		while True:
-			guess:str = self.game.get_input()
+
+			guess = self.game.get_input()
+
 			if len(guess) > 1:
 				print("Please only guess ONE letter!")
+				continue
+
 			elif len(guess) < 1:
 				print('You cannot make an empty guess, silly!')
-			else:
-				try:
-					int(guess)
-					print("Guess a letter, not a number!")
-				except ValueError:
-					break
+				continue
 
-		return guess
+			else:
+				if type(guess) == int:
+					print("Guess a letter, not a number!")
+					continue
+				else:
+					if guess == "q":
+						self.game.quit()
+					else:
+						return guess	
+
+
 # SCREEN
 
 
@@ -58,13 +67,13 @@ class Screen:
 		r = self.body_parts["right"]
 
 		self.board = f"""
-		_________________
-		|		|		|
-		|		{h}		HANG
-		|	   {r}{b}{l}		MAN
-		|	   {r} {l}		|
-	   /|\				|
-	 _/___\_		  __|__
+        _________________
+        |       |       |
+        |       {h}       HANG    
+        |      {r}{b}{l}      MAN
+        |      {r} {l}      |
+       /|\              |
+     _/___\_          __|__
 		"""
 
 		for letter in self.game.word:
@@ -104,7 +113,6 @@ class Game:
 			self.quit()
 		
 		return x
-
 
 	def quit(self):
 		self.win = True
